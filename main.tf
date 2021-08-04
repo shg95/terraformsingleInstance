@@ -11,6 +11,8 @@ terraform {
     secret_key = "${var.aws_secret_key}"
       bucket = "harshaterraformbucket"
       key = "devops.tfstate"
+      dynamodb_table = "terraform-up-and-running-locks"
+      encrypt = "true"
       region = "us-east-1"
   }
 }
